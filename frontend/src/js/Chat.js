@@ -23,6 +23,15 @@ export default class Chat {
   }
 
   bindEvents() {
+    this.ws.addEventListener('open', () => {
+      this.ws.send(JSON.stringify({
+        type: 'login',
+        user: {
+          name: this.user.name
+        }
+      }));
+    });
+
     this.ws.addEventListener('message', (e) => {
       const data = JSON.parse(e.data);
 
@@ -44,6 +53,17 @@ export default class Chat {
         this.sendMessageToServer();
       });
     }
+
+    window.addEventListener('beforeunload', () => {
+      if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+        this.ws.send(JSON.stringify({
+          type: 'exit',
+          user: {
+            name: this.user.name
+          }
+        }));
+      }
+    });
   }
 
   sendMessageToServer() {

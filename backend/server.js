@@ -30,7 +30,7 @@ app.post("/new-user", async (request, response) => {
       status: "error",
       message: "This name is already taken!",
     };
-    response.status(400).send(JSON.stringify(result)).end();
+    return response.status(400).send(JSON.stringify(result)).end();
   }
   const { name } = request.body;
   const isExist = userState.find((user) => user.name === name);
