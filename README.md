@@ -1,9 +1,9 @@
 # Домашнее задание к занятию "8. EventSource, Websockets" — Корпоративный Чат
 
-[![Build Status](https://github.com)](https://github.com)
+[![Build Status](https://github.com/ivantr033/sse-ws-chat/actions/workflows/deploy.yml/badge.svg)](https://github.com/ivantr033/sse-ws-chat/actions/workflows/deploy.yml)
 
 ## 🌐 Ссылка на развертывание (GitHub Pages)
-*   **Корпоративный Чат (Основное задание):** [Открыть приложение](https://github.io)
+*   **Корпоративный Чат (Основное задание):** [Открыть приложение](https://ivantr033.github.io/sse-ws-chat/)
 
 ---
 
