@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate chat</title>
+</head>
+
+<body>
+
+  <div id="chat-app-container">
+
+    <!-- Сетка пользователей -->
+    <div id="users-sidebar">
+      <div class="sidebar-header">Участники</div>
+      <div id="users-list-box"></div>
+    </div>
+
+    <!-- Зона сообщений -->
+    <div id="chat-main-area">
+      <div id="chat-messages-box"></div>
+
+      <!-- Форма отправки (внизу) -->
+      <div id="chat-input-bar">
+        <input type="text" id="chat-message-input" placeholder="Type your message here..." />
+        <button id="chat-send-btn">Отправить</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- МОДАЛЬ ВЫБОРА ПСЕВДОННОГО -->
+  <div id="login-modal-overlay">
+    <div class="login-modal-box">
+      <div class="login-modal-title">Выберите псевдоним</div>
+      <form id="login-modal-form">
+        <input type="text" id="nickname-input" required placeholder="Введите ваш никнейм..." autocomplete="off" />
+        <div id="login-error-message" class="error-text"></div>
+        <button type="submit" id="login-submit-btn">Продолжить</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
